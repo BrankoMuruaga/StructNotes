@@ -1,0 +1,10 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Main from "@UI/Main";
+import Navbar from "@UI/Navbar";
+---
+
+<Layout>
+  <Navbar client:only="react" />
+  <Main client:only="react" />
+</Layout>

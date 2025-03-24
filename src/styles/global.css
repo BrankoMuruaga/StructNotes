@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+    --color-primary-dark: #13151a;
+    --color-secondary-dark: #1b1b1b;
+    --color-tertiary-dark: #37393b;
+    --color-quaternary-dark: #4a4c4e;
+
+    --color-primary-light: #f0f0f0;
+    --color-secondary-light: #e0e0e0;
+    --color-tertiary-light: #d0d0d0;
+    --color-quaternary-light: #c0c0c0;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html.dark .yoopta-editor {
+    color: var(--color-secondary-dark);
+}
+html.dark [class*="accordion"],
+html.dark .yoopta-block-action-buttons {
+    color: var(--color-secondary-light);
+}
+html.dark .yoopta-block-actions-drag,
+html.dark .yoopta-block-actions-plus,
+html.dark .yoopta-block,
+html.dark .yoopta-paragraph,
+html.dark .yoopta-divider-solid{
+    color: var(--color-primary-light);
+}
+
+.yoopta-editor{
+    width: 100% !important;
+}
+
+.yoopta-divider-solid,
+.yoopta-table-data-cell {
+    border-color: var(--color-tertiary-dark) !important;
+}
+
+html.dark .yoopta-divider-solid,
+html.dark .yoopta-table-data-cell {
+    border-color: var(--color-primary-light) !important;
+}
+
+.yoopta-table-data-cell-head {
+    background-color: var(--color-tertiary-light) !important;
+}
+
+html.dark .yoopta-table-data-cell-head {
+    background-color: var(--color-tertiary-dark) !important;
+}
+

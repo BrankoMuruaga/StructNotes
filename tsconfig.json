@@ -1,0 +1,30 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+    ,
+      "baseUrl": ".",
+      "paths": {
+        "@src/*": ["src/*"],
+        "@components/*": ["src/components/*"],
+        "@UI/*": ["src/UI/*"],
+        "@layouts/*": ["src/layouts/*"],
+        "@styles/*": ["src/styles/*"],
+        "@utils/*": ["src/utils/*"],
+        "@icons/*": ["src/icons/*"],
+        "@yooptaEditor/*": ["src/yooptaEditor/*"],
+        "@controllers/*": ["src/controllers/*"],
+        "@models/*": ["src/models/*"],
+        "@db/*": ["src/db/*"],
+      }
+  }
+}

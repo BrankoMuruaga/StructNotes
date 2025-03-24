@@ -1,0 +1,44 @@
+---
+import "@styles/global.css";
+---
+
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="StructNotes - Your structured notes application"
+    />
+    <title>StructNotes</title>
+    <script>
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    </script>
+  </head>
+  <body
+    class="relative bg-primary-light text-primary-dark dark:text-primary-light dark:bg-primary-dark"
+  >
+    <slot />
+  </body>
+</html>
+
+<style>
+  html {
+    font-size: 16px;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-x: hidden;
+  }
+</style>
