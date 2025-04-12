@@ -11,24 +11,22 @@ function DocumentButton({ id, titulo, contenido }: Document) {
     dispatchEvent("crudEvent");
   };
   return (
-    <span className="flex items-center justify-between">
-      <button
-        className="text-xs cursor-pointer
-      p-2 py-0.5
-      w-5/6
-      text-left
-      active:opacity-25 
-      hover:rounded-xl
-      hover:bg-quaternary-light 
-      dark:hover:bg-quaternary-dark 
-      dark:active:opacity-50"
-        onClick={handlerClick}
-        key={id}
-      >
-        <p className="overflow-clip text-ellipsis whitespace-nowrap">
-          {titulo}
-        </p>
-      </button>
+    <span
+      className="text-xs cursor-pointer
+        grid
+        grid-cols-[85%_15%]
+        items-center
+        px-2 py-1
+        text-left
+        active:opacity-25 
+        hover:rounded-xl
+        hover:bg-quaternary-light 
+        dark:hover:bg-quaternary-dark 
+        dark:active:opacity-50"
+      onClick={handlerClick}
+      key={id}
+    >
+      <p className="overflow-clip text-ellipsis whitespace-nowrap">{titulo}</p>
       <OptionsButton id={id} options={AsideDocumentsOptions} />
     </span>
   );
