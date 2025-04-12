@@ -1,5 +1,6 @@
 import YooptaEditor, { Blocks, type YooptaContentValue } from "@yoopta/editor";
 import editor, { MARKS, PLUGINS, TOOLS } from "@yooptaEditor/EditorConfig";
+// Removed unused import
 import { useEffect, useState } from "react";
 
 export const Editor = () => {
@@ -8,6 +9,21 @@ export const Editor = () => {
 
   const handleChange = (value: YooptaContentValue) => {
     setValue(value);
+
+    const blocks = Object.keys(editor.children || {});
+
+    if (blocks.length > 0) {
+      const lastBlockId = blocks[blocks.length - 2];
+      const lastElement = document.querySelector(
+        `[data-yoopta-block-id="${lastBlockId}"]`
+      ) as HTMLElement | null;
+
+      if (lastElement) {
+        lastElement.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   useEffect(() => {
