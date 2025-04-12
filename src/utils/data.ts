@@ -1,11 +1,12 @@
 import Trash from "@src/icons/Trash";
-import { deleteDocument } from "@src/services/documentCRUD";
+import { deleteDocument } from "@src/db/localStorage";
+import type { DocumentOptions } from "@src/types";
 
-export const AsideDocumentsOptions = [
+export const AsideDocumentsOptions: DocumentOptions[] = [
   {
     name: "Delete",
     Icon: Trash,
-    action: (id: string | number) => deleteDocument(id),
+    action: (id: string) => deleteDocument(id),
   },
 ];
 

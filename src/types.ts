@@ -16,7 +16,7 @@ export type State = {
 };
 
 export interface Document {
-  id: number;
+  id: string;
   titulo: string;
   contenido: YooptaContentValue;
 }
@@ -25,8 +25,8 @@ export interface DocumentOptions {
   name: string;
   Icon: ({ size, fill }: { size?: number; fill?: string }) => JSX.Element;
   action: (
-    id: string | number
-  ) => Promise<
-    { success: boolean; error?: undefined } | { success: boolean; error: any }
-  >;
+    id: string
+  ) =>
+    | { success: boolean; error?: undefined }
+    | { success: boolean; error: any };
 }
