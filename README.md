@@ -1,6 +1,6 @@
 # Notion Clone con Astro, React y Yoopta-Editor
 
-Este proyecto es un clon ligero de Notion, construido con Astro como framework, React para la interfaz interactiva, Yoopta-Editor para la edición de texto avanzada y SQLite con Sequelize para almacenar los documentos.
+Este proyecto es un clon ligero de Notion, construido con Astro como framework, React para la interfaz interactiva, Yoopta-Editor para la edición de texto avanzada y LocalStorage para almacenar los documentos.
 
 
 
@@ -16,9 +16,9 @@ Este proyecto es un clon ligero de Notion, construido con Astro como framework, 
 | Astro | Framework de frontend estático y dinámico |
 | React | Librería para UI interactiva |
 | Yoopta-Editor | Editor de texto avanzado basado en Slate |
-| SQLite | Base de datos ligera y embebida |
-| Sequelize | ORM para interactuar con SQLite |
 | Tailwind CSS | Framework de estilos para diseño rápido |
+| LocalStorage | Para guardar los documentos |
+
 
 
 
@@ -32,13 +32,10 @@ Este proyecto es un clon ligero de Notion, construido con Astro como framework, 
 │── 📂 public/
 │── 📂 src/
 │   │── 📂 components/
-│   │── 📂 controllers/
 │   │── 📂 db/
 │   │── 📂 icons/
 │   │── 📂 layouts/
-│   │── 📂 models/
 │   │── 📂 pages/
-│   │── 📂 services/
 │   │── 📂 styles/
 │   │── 📂 UI/
 │   │── 📂 utils/
@@ -47,7 +44,6 @@ Este proyecto es un clon ligero de Notion, construido con Astro como framework, 
 │   │── 📜 types.ts
 │── 📜 .gitignore
 │── 📜 astro.config.mjs
-│── 📜 database.sqlite
 │── 📜 package-lock.json
 │── 📜 package.json
 │── 📜 README.md
@@ -72,14 +68,14 @@ cd StructNotes
 
 Instala las dependencias
 
-```javascript
+```shell
 npm install
 ```
 
 
 Ejecuta el servidor en modo desarrollo
 
-```javascript
+```shell
 npm run dev
 ```
 Abre en el navegador: http://localhost:4321/
