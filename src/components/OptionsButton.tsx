@@ -6,7 +6,7 @@ function OptionsButton({
   id,
   options,
 }: {
-  id: string | number;
+  id: string;
   options: DocumentOptions[];
 }) {
   const [isOpen, setIsOpen] = useState(false);

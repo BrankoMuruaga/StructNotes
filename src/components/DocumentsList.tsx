@@ -1,14 +1,18 @@
 import type { Document } from "@src/types";
 import { useEffect, useState } from "react";
 import DocumentButton from "./DocumentButton";
+import { getAllDocuments } from "@src/db/localStorage";
 
 function DocumentsList() {
-  const [documents, setDocuments] = useState([]);
+  const [documents, setDocuments] = useState<Document[]>([]);
   useEffect(() => {
     const fetchDocuments = async () => {
-      setDocuments(
-        await fetch("/api/document").then((response) => response.json())
-      );
+      const result = getAllDocuments();
+      if (result.success && result.documents) {
+        setDocuments(result.documents);
+      } else {
+        console.error("Failed to fetch documents:", result.error);
+      }
     };
     fetchDocuments();
   }, []);

@@ -1,7 +1,7 @@
 import Check from "@src/icons/Check";
 import Save from "@src/icons/Save";
 import X from "@src/icons/X";
-import { createDocument, updateDocument } from "@src/services/documentCRUD";
+import { createDocument, updateDocument } from "@src/db/localStorage";
 import type { ComponentProps } from "@src/types";
 import { dispatchEvent } from "@src/utils/data";
 import editor from "@yooptaEditor/EditorConfig";
@@ -33,7 +33,7 @@ function SaveButton({ className }: ComponentProps) {
       const title = (editor as any).title;
 
       if ((editor as any).documentID) {
-        await updateDocument((editor as any).documentID, title, editorContent);
+        updateDocument((editor as any).documentID, title, editorContent);
         setSaving(false);
         setIsSaved(true);
 
@@ -41,7 +41,7 @@ function SaveButton({ className }: ComponentProps) {
         return;
       }
 
-      const result = await createDocument(title, editorContent);
+      const result = createDocument(title, editorContent);
       console.log(result);
 
       if (result.success) {
