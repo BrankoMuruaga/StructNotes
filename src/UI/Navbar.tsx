@@ -7,7 +7,7 @@ import SaveButton from "@src/components/SaveButton";
 function Navbar() {
   return (
     <nav className="fixed top-0 z-15 flex bg-secondary-light dark:bg-secondary-dark w-full py-1 px-3 rounded-b-lg ">
-      <section className="flex w-52 pr-3">
+      <section className="flex w-52 pr-3 z-10">
         <MenuButton />
         <section className="m-auto flex">
           <HistoryButton undo />
@@ -15,8 +15,8 @@ function Navbar() {
         </section>
         <SaveButton />
       </section>
-      <InputName className="w-9/12 mr-auto" />
-      <ToggleTheme className="mr-0" />
+      <InputName className="w-full absolute" />
+      <ToggleTheme className="mr-0 z-10" />
     </nav>
   );
 }
