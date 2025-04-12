@@ -35,7 +35,7 @@ const getAllDocuments = () => {
     const documents = [];
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key && key.startsWith("notion_doc_")) {
+      if (key && key.startsWith(DEFAULT_ID)) {
         const document = localStorage.getItem(key);
         if (document) {
           documents.push({ id: key, ...JSON.parse(document) });
