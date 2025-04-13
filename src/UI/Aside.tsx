@@ -11,6 +11,8 @@ function Aside({ className }: ComponentProps) {
 
   useEffect(() => {
     const handleToggleAside = () => {
+      const toolBar = document.getElementById("tool_bar");
+      toolBar?.classList.toggle("hidden");
       setIsVisible((prevState) => !prevState);
     };
 
@@ -29,7 +31,7 @@ function Aside({ className }: ComponentProps) {
 
   return (
     <aside
-      className={`fixed mr-10 flex flex-col items-stretch left-0 top-0 w-52 h-full z-10 bg-secondary-light dark:bg-secondary-dark p-3 pt-12 transition-transform duration-300 ${
+      className={`fixed mr-10 flex flex-col items-stretch left-0 top-0 w-52 h-full z-15 bg-secondary-light dark:bg-secondary-dark p-3 pt-12 transition-transform duration-300 ${
         isVisible ? "translate-x-0" : "-translate-x-full"
       } ${className}`}
     >
