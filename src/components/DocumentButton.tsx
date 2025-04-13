@@ -2,6 +2,7 @@ import type { Document } from "@src/types";
 import { AsideDocumentsOptions, dispatchEvent } from "@src/utils/data";
 import OptionsButton from "./OptionsButton";
 import editor from "@src/yooptaEditor/EditorConfig";
+import DeleteButton from "./DeleteButton";
 
 function DocumentButton({ id, titulo, contenido }: Document) {
   const handlerClick = () => {
@@ -27,7 +28,7 @@ function DocumentButton({ id, titulo, contenido }: Document) {
       key={id}
     >
       <p className="overflow-clip text-ellipsis whitespace-nowrap">{titulo}</p>
-      <OptionsButton id={id} options={AsideDocumentsOptions} />
+      <DeleteButton id={id} />
     </span>
   );
 }

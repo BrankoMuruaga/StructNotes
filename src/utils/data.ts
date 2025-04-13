@@ -10,7 +10,13 @@ export const AsideDocumentsOptions: DocumentOptions[] = [
   },
 ];
 
-export function dispatchEvent(name: string) {
+export function dispatchEvent(name: string, data?: any) {
+  if (data) {
+    const event = new CustomEvent(name, { detail: data });
+    window.dispatchEvent(event);
+    return;
+  }
+  // If no data is passed, just dispatch the event with the name
   const event = new CustomEvent(name);
   window.dispatchEvent(event);
 }
