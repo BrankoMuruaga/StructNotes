@@ -61,8 +61,8 @@ function SaveButton({ className }: ComponentProps) {
 
   const renderIcon = () => {
     if (saving) return <Save size={20} />;
-    if (isSaved) return <Check size={20} />;
-    if (isError) return <X size={20} />;
+    if (isSaved) return <Check size={20} stroke="#62e469" />;
+    if (isError) return <X size={20} stroke="#e46962" />;
     return <Save size={20} />;
   };
 

@@ -1,4 +1,4 @@
-function X({ size }) {
+function X({ size, stroke = "currentColor" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,7 +6,7 @@ function X({ size }) {
       height={size}
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={stroke}
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
