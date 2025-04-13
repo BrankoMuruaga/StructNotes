@@ -2,7 +2,7 @@
 
 Este proyecto es un clon ligero de Notion, construido con Astro como framework, React para la interfaz interactiva, Yoopta-Editor para la edición de texto avanzada y LocalStorage para almacenar los documentos.
 
-
+![Screenshot](./public/screenshot.webp)
 
 ---
 
