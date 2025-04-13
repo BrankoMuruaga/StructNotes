@@ -12,7 +12,7 @@ function NewDocumentButton() {
   };
   return (
     <button
-      className="flex gap-2 justify-around items-center px-3 py-2 rounded-4xl mr-auto mb-3 font-bold bg-secondary-light hover:bg-tertiary-light active:bg-quaternary-light dark:bg-tertiary-dark dark:hover:bg-quaternary-dark dark:active:bg-primary-dark cursor-pointer"
+      className="flex gap-2 justify-around items-center px-3 py-2 rounded-4xl mr-auto mb-3 font-bold bg-tertiary-light hover:bg-quaternary-light active:bg-tertiary-light  dark:bg-tertiary-dark dark:hover:bg-quaternary-dark dark:active:bg-primary-dark cursor-pointer"
       onClick={handleClick}
     >
       <Plus size={24} />
