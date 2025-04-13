@@ -1,3 +1,4 @@
+import ConfirmationModal from "@src/components/ConfirmationModal";
 import GitButton from "@src/components/GitButton";
 import { Editor } from "@src/UI/Editor";
 import Aside from "@UI/Aside";
@@ -8,6 +9,7 @@ function Main() {
       <Aside />
       <Editor />
       <GitButton />
+      <ConfirmationModal />
     </main>
   );
 }

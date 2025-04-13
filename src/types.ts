@@ -30,3 +30,14 @@ export interface DocumentOptions {
     | { success: boolean; error?: undefined }
     | { success: boolean; error: any };
 }
+
+export interface DetailsConfirmationModal {
+  title: string;
+  message: string;
+  confirmText: string;
+  cancelText: string;
+  onConfirm: () => void;
+  onCancel: () => void;
+  confirmColor?: string;
+  cancelColor?: string;
+}
